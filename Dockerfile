@@ -2,13 +2,11 @@ FROM alpine:latest
 
 WORKDIR /app
 
-COPY package*.json .
+COPY . .
 
-EXPOSE 5000
+EXPOSE 5001
 
 RUN apk update && apk add nodejs npm
 RUN npm install
 
 CMD["npm","start"]
-
-
