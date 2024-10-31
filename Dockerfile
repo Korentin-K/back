@@ -9,4 +9,6 @@ EXPOSE 5001
 RUN apk update && apk add nodejs npm
 RUN npm install
 
-CMD["npm","start"]
+ENTRYPOINT["npm","run"]
+
+CMD["start"]
